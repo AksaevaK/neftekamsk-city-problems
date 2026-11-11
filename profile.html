@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои заявки - Проблемы города Нефтекамск</title>
+    <link rel="stylesheet" href="../styles/styleprof.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__inner container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/img/лого.png" alt="Логотип" class="logo__img">
+                    <span class="logo__text">Проблемы города Нефтекамск</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="#" class="nav__link">Карты</a>
+                <a href="#" class="nav__link">Заявки</a>
+            </nav>
+            <div class="header__actions">
+                <img src="/img/поискгол.png" alt="Поиск" class="header__search-icon">
+                <div class="header__auth-btns">
+                    <a href="profile.html" class="btn btn--primary" style="color: white;">Профиль</a>
+                    <a href="#" class="btn btn--primary">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-layout">
+        
+        <input type="checkbox" id="tab-requests" class="tab-input" checked>
+        <input type="checkbox" id="tab-notifications" class="tab-input">
+        <input type="checkbox" id="tab-settings" class="tab-input">
+
+        <aside class="sidebar">
+            <div class="sidebar__avatar">
+                <img src="/img/профиль.png" alt="Аватар" class="avatar-img">
+            </div>
+            <h2 class="sidebar__name">Кира</h2>
+            
+            <div class="sidebar__menu">
+                <label for="tab-requests" class="menu-btn">Мои заявки</label>
+                <label for="tab-notifications" class="menu-btn">Уведомления</label>
+                <label for="tab-settings" class="menu-btn">Настройки</label>
+            </div>
+
+            <a href="login.html" class="menu-btn menu-btn--logout" onclick="localStorage.removeItem('userLoggedIn')">Выйти</a>
+        </aside>
+
+        <section class="content">
+            
+            <div class="tab-content content--requests">
+                <h1 class="content__title">Мои заявки</h1>
+                <p class="content__subtitle">Здесь вы можете следить за своими заявками</p>
+                
+                <div class="search-box">
+                    <img src="/img/поискгол.png" alt="Поиск" class="search-box__icon">
+                    <input type="text" placeholder="Поиск по заявкам..." class="search-box__input">
+                </div>
+
+                <div class="filters">
+                    <input type="radio" name="filter" id="f-all" class="filter-input" checked>
+                    <input type="radio" name="filter" id="f-new" class="filter-input">
+                    <input type="radio" name="filter" id="f-work" class="filter-input">
+                    <input type="radio" name="filter" id="f-done" class="filter-input">
+
+                    <div class="filter-btns">
+                        <label for="f-all" class="filter-btn">Все</label>
+                        <label for="f-new" class="filter-btn">Новые</label>
+                        <label for="f-work" class="filter-btn">В работе</label>
+                        <label for="f-done" class="filter-btn">Решённые</label>
+                    </div>
+
+                    <div class="requests-list">
+                        <div class="request-item item--work">
+                            <img src="/img/яма2.webp" alt="Яма" class="request-img">
+                            <div class="request-info">
+                                <h3 class="request-title">Яма на дороге</h3>
+                                <p class="request-address">ул. Победы 8</p>
+                                <span class="status status--red">В работе</span>
+                            </div>
+                            <span class="request-date">17.10.2026</span>
+                        </div>
+
+                        <div class="request-item item--done">
+                            <img src="/img/мусор2.jpg" alt="Мусор" class="request-img">
+                            <div class="request-info">
+                                <h3 class="request-title">Мусор на тропе здоровья</h3>
+                                <p class="request-address">Юбилейный проспект, д. 17</p>
+                                <span class="status status--green">Решено</span>
+                            </div>
+                            <span class="request-date">09.06.2026</span>
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+                        <span class="page-arrow"><</span>
+                        <span class="page-num active">1</span>
+                        <span class="page-arrow">></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content content--notifications">
+                <h1 class="content__title">Уведомления</h1>
+                <p class="content__subtitle">Здесь будут отображаться ваши уведомления.</p>
+            </div>
+
+            <div class="tab-content content--settings">
+                <h1 class="content__title">Настройки</h1>
+                <p class="content__subtitle">Здесь вы можете изменить настройки профиля.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__left">
+                <img src="/img/печенье.png" alt="Cookie" class="footer__cookie-icon">
+                <p class="footer__text">Мы используем файлы cookie (небольшие текстовые файлы) для аналитики клиентских путей и маркетинговых исследований в целях и последующей систематизации и аналитики данных.</p>
+            </div>
+            <button class="btn btn--white">Принять</button>
+        </div>
+    </footer>
+
+    <script>
+    if (localStorage.getItem('userLoggedIn') === 'true') {
+        var btnLogin = document.getElementById('btn-login');
+        if (btnLogin) {
+            btnLogin.innerText = 'Профиль';
+            btnLogin.href = 'profile.html';
+            btnLogin.classList.remove('btn--outline');
+            btnLogin.classList.add('btn--primary');
+        }
+    }
+    </script>
+
+</body>
+</html>

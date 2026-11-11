@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проблемы города Нефтекамск</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__inner container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/img/лого.png" alt="Логотип" class="logo__img">
+                    <span class="logo__text">Проблемы города Нефтекамск</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="#" class="nav__link">Карты</a>
+                <a href="#" class="nav__link">Заявки</a>
+            </nav>
+            <div class="header__actions">
+                <img src="/img/поискгол.png" alt="Поиск" class="header__search-icon">
+                <div class="header__auth-btns">
+                    <a href="/главная/login.html" id = "btn-login" class="btn btn--outline">Войти</a>
+                    <a href="#" class="btn btn--primary">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <img src="/img/банер.webp" alt="Город" class="banner__bg">
+        <div class="banner__overlay"></div>
+        <div class="container banner__content">
+            <h1 class="banner__title">Сообщи о проблеме —
+сделаем город лучше</h1>
+            <div class="banner__actions">
+                <a href="#" class="btn btn--primary">Оставить заявку</a>
+                <a href="#" class="btn btn--white">Карта проблем</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="search-bar">
+        <div class="container">
+            <div class="search-bar__container">
+                <img src="/img/поискбел.png" alt="Поиск" class="search-bar__icon">
+                <input type="text" class="search-bar__input" placeholder="Поиск по адресу, категории или номеру заявки">
+            </div>
+        </div>
+    </div>
+
+    <section class="categories-section container">
+        <div class="categories">
+            <div class="category-card">
+                <img src="/img/дорога1.png" alt="Дороги">
+                <span>Дороги и тротуары</span>
+            </div>
+            <div class="category-card">
+                <img src="/img/мусорка1.png" alt="Мусор">
+                <span>Мусор</span>
+            </div>
+            <div class="category-card">
+                <img src="/img/лампочка1.png" alt="Освещение">
+                <span>Освещение</span>
+            </div>
+            <div class="category-card">
+                <img src="/img/дерево1.png" alt="Благоустройство">
+                <span>Благоустройство</span>
+            </div>
+            <div class="category-card">
+                <img src="/img/лист1.png" alt="Экология">
+                <span>Экология</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works container">
+        <h2 class="section-title">Как это работает</h2>
+        <div class="how-it-works__content">
+            <div class="accordion">
+                <details class="accordion__item">
+                    <summary class="accordion__header">Сообщи о проблеме</summary>
+                    <div class="accordion__body">Нажмите кнопку "Оставить за-явку". Выберите категорию, укажите адрес и опишите ситуацию. При желании до-бавь фотографию!</div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__header">Заявка поступит на рас-смотрение</summary>
+                    <div class="accordion__body">После отправки заявки, обра-щение появится в системе и будет направлено ответственным специалистам.</div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__header">Следи за ходом решения</summary>
+                    <div class="accordion__body">В личном кабинете можно по-смотреть текущий статус обращения и узнать, что происходит с проблемой.</div>
+                </details>
+                <details class="accordion__item">
+                    <summary class="accordion__header">Получи результат</summary>
+                    <div class="accordion__body">После рассмотрения ты сможешь ознакомиться с ответом и оценить результат работы.</div>
+                </details>
+            </div>
+            <div class="how-it-works__image">
+                <img src="/img/нефтекамск2.webp" alt="Родной Нефтекамск">
+            </div>
+        </div>
+    </section>
+
+    <section class="recent container">
+        <div class="recent__header">
+            <h2 class="section-title">Последние заявки</h2>
+            <a href="/profile.html" class="link">Все заявки →</a>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <img src="/img/яма1.webp" alt="Яма" class="card__img">
+                <div class="card__content">
+                    <h3 class="card__title">Ямы на дороге</h3>
+                    <p class="card__address">ул. Строителей, 91</p>
+                    <div class="card__footer">
+                        <span class="status status--red">В работе</span>
+                        <span class="card__date">12.04.2026</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/img/мусор1.webp" alt="Мусор" class="card__img">
+                <div class="card__content">
+                    <h3 class="card__title">Мусор во дворе</h3>
+                    <p class="card__address">ул. Ленина, 40</p>
+                    <div class="card__footer">
+                        <span class="status status--green">Решено</span>
+                        <span class="card__date">20.08.2026</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/img/фонарь.webp" alt="Фонарь" class="card__img">
+                <div class="card__content">
+                    <h3 class="card__title">Фонарь не горит</h3>
+                    <p class="card__address">Юбилейный проспект, 19</p>
+                    <div class="card__footer">
+                        <span class="status status--blue">Новая</span>
+                        <span class="card__date">01.11.2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__left">
+                <img src="/img/печенье.png" alt="Cookie" class="footer__cookie-icon">
+            <p class="footer__text">Мы используем файлы cookie (небольшие текстовые файлы) для аналитики клиентских путей и маркетинговых исследований в целях и последующей систематизации и аналитики данных.</p>
+            </div>
+            <button class="btn btn--white">Принять</button>
+        </div>
+    </footer>
+
+    <script>
+    if (localStorage.getItem('userLoggedIn') === 'true') {
+        var btnLogin = document.getElementById('btn-login');
+        if (btnLogin) {
+            btnLogin.innerText = 'Профиль';
+            btnLogin.href = 'profile.html';
+            btnLogin.classList.remove('btn--outline');
+            btnLogin.classList.add('btn--primary');
+        }
+    }
+    </script>
+
+</body>
+</html>

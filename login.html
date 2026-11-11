@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Проблемы города Нефтекамск</title>
+    <link rel="stylesheet" href="/styles/stylelog.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner container">
+            <div class="logo">
+                <a href="/главная/index.html">
+                    <img src="/img/лого.png" alt="Логотип" class="logo__img">
+                    <span class="logo__text">Проблемы города Нефтекамск</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="/главная/index.html" class="nav__link">Главная</a>
+                <a href="#" class="nav__link">Карты</a>
+                <a href="#" class="nav__link">Заявки</a>
+            </nav>
+            <div class="header__actions">
+                <img src="/img/поискгол.png" alt="Поиск" class="header__search-icon">
+                <div class="header__auth-btns">
+                    <a href="login.html" class="btn btn--outline">Войти</a>
+                    <a href="#" class="btn btn--primary">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-wrapper">
+        <div class="auth-card">
+            
+            <div class="auth-inputs">
+                <input type="text" id="login" placeholder="Email или никнейм" class="auth-input">
+                <input type="password" id="password" placeholder="Пароль" class="auth-input">
+            </div>
+
+            <a href="#" class="auth-forgot">Вы забыли пароль? <span class="auth-forgot__link">Восстановить</span></a>
+
+            <div class="auth-checkbox">
+                <input type="checkbox" id="robot" class="auth-checkbox__input">
+                <label for="robot" class="auth-checkbox__label">Я не робот</label>
+            </div>
+
+            <button class="btn btn--primary auth-submit" onclick="checkLogin()">Войти</button>
+
+            <div class="auth-divider">или</div>
+
+            <div class="auth-socials">
+                <img src="/img/гугл.png" alt="Google" class="auth-social-icon">
+                <img src="/img/вк.png" alt="VK" class="auth-social-icon">
+                <img src="/img/яндекс.png" alt="Yandex" class="auth-social-icon">
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__left">
+                <img src="/img/печенье.png" alt="Cookie" class="footer__cookie-icon">
+                <p class="footer__text">Мы используем файлы cookie (небольшие текстовые файлы) для аналитики клиентских путей и маркетинговых исследований в целях и последующей систематизации и аналитики данных.</p>
+            </div>
+            <button class="btn btn--white">Принять</button>
+        </div>
+    </footer>
+    <script>
+        function checkLogin() {
+            var loginValue = document.getElementById('login').value;
+            var passValue = document.getElementById('password').value;
+            var isRobotChecked = document.getElementById('robot').checked;
+            if (loginValue === 'Кира' && passValue === 'Kira01' && isRobotChecked) {
+                localStorage.setItem('userLoggedIn','true');
+                window.location.href = "profile.html";
+            } else {
+                alert('Неверный логин или пароль! (Подсказка: не забудьте галочку)');
+            }
+        }
+    </script>
+
+</body>
+</html>
